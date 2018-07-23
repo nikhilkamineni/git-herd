@@ -1,6 +1,5 @@
 import subprocess
 import sys
-
 from config import *
 
 arguments = sys.argv[1:]
@@ -33,12 +32,9 @@ def pull_repos(repo_name):
 if len(arguments) is 0:
     while running:
         print('')
-        # print('--------------------------')
         print('  c: clone a projects repos')
         print('  p: pull all repos')
         print('')
-        # print('  s: set target directory')
-        # print('  a: add member')
         print('  m: view members')
         print('  r: view root directory')
         print('')
@@ -52,12 +48,7 @@ if len(arguments) is 0:
         if choice == 'p':
             repo_name = input('enter repo name: ')
             pull_repos(repo_name)
-        # if choice == 'a':
-        #     name = input('member name: ')
-        #     username = input('github username: ')
-        #     add_member(name, username)
         if choice == 'm':
-            # print('--------------------------')
             print('')
             print('Members: ', MEMBERS)
             print('')
