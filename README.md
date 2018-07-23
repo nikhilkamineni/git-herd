@@ -6,12 +6,12 @@ A simple command line tool written in Python that lets you clone and pull forks 
 Clone this repo to a location of your choice.
 
 ## Setup
-Create a `config.py` file with the required variables. See `example-config.py` for details.
-Optional: Create an alias in your shell configuration file for convenience.
+Create a `config.py` file with the required variables in the same folder as `git-herd.py`. See `example-config.py` for details.  
 
-For example, add this to your `.zshrc` or `.bashrc` to run git-herd when typing `herd` into your terminal:
+_Optional:_ Create an alias in your shell configuration file for convenience.  
+For example, add the following to your `.zshrc` or `.bashrc` to run git-herd when typing `herd` into your terminal:
 ```
-alias herd="python3 <your/path/to/git-herd.py>"
+alias herd="python3 /your/path/to/git-herd.py"
 ```
 
 ## Usage
