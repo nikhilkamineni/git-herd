@@ -7,11 +7,11 @@ Clone this repo to a location of your choice.
 
 ## Setup
 Create a `config.py` file with the required variables. See `example-config.py` for details.
-Create an alias in your shell configuration file to make running the `git-herd.py` file more convenient.
+Optional: Create an alias in your shell configuration file for convenience.
 
-For example, add this to your .zshrc to run git-herd when typing `herd` into your terminal:
+For example, add this to your `.zshrc` or `.bashrc` to run git-herd when typing `herd` into your terminal:
 ```
-alias herd="python3 ~/programming/git-herd/git-herd.py"
+alias herd="python3 <your/path/to/git-herd.py>"
 ```
 
 ## Usage
