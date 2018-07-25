@@ -1,13 +1,9 @@
 import subprocess
 import sys
-from config import *
+from config import MEMBERS, BASE_URL, ROOT_DIR
 
 arguments = sys.argv[1:]
 running = True
-
-
-def add_member(name, username):
-    members[name] = username
 
 
 def clone_repos(repo_name):
@@ -16,7 +12,7 @@ def clone_repos(repo_name):
         repo_url = f'{BASE_URL}/{MEMBERS[member]}/{repo_name}.git'
         repo_dest = f'{ROOT_DIR}/{member}/{repo_name}'
         commands.append(f'git clone {repo_url} {repo_dest}')
-    command =';'.join(commands)
+    command = ';'.join(commands)
     subprocess.call(command, shell=True)
 
 
@@ -25,7 +21,7 @@ def pull_repos(repo_name):
     for member in MEMBERS:
         sub_dir = f'{ROOT_DIR}/{member}/{repo_name}'
         commands.append(f'cd {sub_dir}')
-    command = ';git pull;'.join(commands)
+    command = ';git pull;'.join(commands) + ';git pull'
     subprocess.call(command, shell=True)
 
 
